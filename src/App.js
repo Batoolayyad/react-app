@@ -1,16 +1,17 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/main'
-import Footer from './components/Footer';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+;
 class App extends React.Component{
   render(){
     return(
-      <div>
-        <h1>Welcome To Horned Animals </h1>
+      <>
         <Header/>
         <Main/>
         <Footer/>
-      </div>
+        <dataHorned/>
+      </>
     )
   }
 }
