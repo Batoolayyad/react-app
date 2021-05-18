@@ -10,7 +10,6 @@ class HornedBeast extends React.Component{
           numberOfPic: 0,
         }
       }
-    
       increaseNumberOfPic = () => {
         this.setState({
           numberOfPic: this.state.numberOfPic + 1,
@@ -28,11 +27,13 @@ class HornedBeast extends React.Component{
     //     )
     //     }
     // }
-
+    showModalFun =()=>{
+      this.props.showModal(this.props.title)
+  }
     render() {
         return (
           <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }} onClick={this.showModalFun}>
               <Card.Img variant="top" src={this.props.imageUrl} alt={this.props.title} title={this.props.title} />
               <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
