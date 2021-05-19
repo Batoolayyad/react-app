@@ -1,6 +1,7 @@
 import React from 'react';
-import HornedBeast  from './HornedBeast.js';
-import DataHorned from './asset/data.json';
+import HornedBeast  from './HornedBeast';
+//import DataHorned from './asset/data.json';
+
 
 class Main extends React.Component {
     constructor(props) {
@@ -11,16 +12,19 @@ class Main extends React.Component {
             description: 'item.description',
         }
     }
-    render(){
+
+    render() {
         return (
+
             <>
-                {DataHorned.map((item,idx)=>{
-                    return(
+                {this.props.beastArry.map((item,idx)=> {
+                    return (
                         <HornedBeast
                         key={idx}
                         title={item.title}
                         imageUrl={item.image_url}
                         description={item.description}
+                        showModal={this.props.showModal}
                         />
                     )
 
