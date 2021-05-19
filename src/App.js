@@ -11,6 +11,7 @@ class App extends React.Component{
     this.state = {
       dataArray: DataHorned,
       element: {},
+      show : false
     }
   }
   showModal=(parameter)=>{
@@ -26,7 +27,7 @@ this.setState({
 })
 
 }
-hideModal=(parameter)=>{
+hideModal=()=>{
   this.setState({
 show:false,
 })
@@ -42,6 +43,7 @@ show:false,
         <SelectBeast
         element={this.state.element}
         hideModal={this.hideModal}
+        show={this.state.show}
       />
         <Footer/>
       </>
