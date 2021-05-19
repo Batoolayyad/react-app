@@ -13,17 +13,18 @@ class Main extends React.Component {
         }
     }
 
-    render(){
+    render() {
         return (
+
             <>
-                {this.porps.BeastArry.map((item,idx)=>{
-                    return(
+                {this.props.beastArry.map((item,idx)=> {
+                    return (
                         <HornedBeast
                         key={idx}
                         title={item.title}
                         imageUrl={item.image_url}
                         description={item.description}
-                        showModal={item.props.showModal}
+                        showModal={this.props.showModal}
                         />
                     )
 

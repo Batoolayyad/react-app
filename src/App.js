@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './header';
-import Main from './main';
-import Footer from './footer';
-import DataHorned from './asset/data.json';
-import SelectBeast from './selectBeast';
+import Header from './component/header';
+import Main from './component/main';
+import Footer from './component/footer';
+import DataHorned from './asset/data';
+import SelectBeast from './component/selectBeast';
 
 class App extends React.Component{
   constructor(props) {
@@ -18,8 +18,8 @@ let chosenElement= DataHorned.find((element) =>{
   if (element.title === parameter){
     return element;
   }
-
 })
+
 this.setState({
   element:chosenElement,
   show: true,
@@ -27,7 +27,7 @@ this.setState({
 
 }
 hideModal=(parameter)=>{
-  this.showTrue({
+  this.setState({
 show:false,
 })
 }
@@ -36,8 +36,8 @@ show:false,
       <>
         <Header/>
         <Main
-        BeastArry= {this.state.dataArray}
-        showModel={this.showModal}
+        beastArry= {this.state.dataArray}
+        showModal={this.showModal}
          />
         <SelectBeast
         element={this.state.element}

@@ -9,6 +9,7 @@ class HornedBeast extends React.Component{
         this.state = {
           numberOfPic: 0,
         }
+        console.log();
       }
       increaseNumberOfPic = () => {
         this.setState({
